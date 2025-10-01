@@ -59,7 +59,7 @@ let cnt=0;
     const url = `https://www.omdbapi.com/?t=${encodeURIComponent(movie)}&apikey=${apiKey}`;
     const res = await fetch(url);
     const data = await res.json();
-   // console.log(data.Title, data.Released, data.Poster);
+    console.log(data.Title, data.Released, data.Poster);
     movies_data.push({id:cnt,title:data.Title,url:data.Poster,release_date:data.Released});
     cnt++;
   }
