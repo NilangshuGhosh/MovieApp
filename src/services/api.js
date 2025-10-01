@@ -56,7 +56,7 @@ export const popular_movies = async () => {
 const movies_data=[];
 let cnt=0;
   for (const movie of movies) {
-    const url = `http://www.omdbapi.com/?t=${encodeURIComponent(movie)}&apikey=${apiKey}`;
+    const url = `https://www.omdbapi.com/?t=${encodeURIComponent(movie)}&apikey=${apiKey}`;
     const res = await fetch(url);
     const data = await res.json();
    // console.log(data.Title, data.Released, data.Poster);
@@ -73,7 +73,7 @@ for (let index = 0; index < movies_data.length; index++) {
 export const search_movies=async(movie)=>{
 const movies_data=[];
 const apiKey = "27076755"; // your OMDb key
- const url = `http://www.omdbapi.com/?t=${encodeURIComponent(movie)}&apikey=${apiKey}`;
+ const url = `https://www.omdbapi.com/?t=${encodeURIComponent(movie)}&apikey=${apiKey}`;
     const res = await fetch(url);
     const data = await res.json();
     movies_data.push({id:0,title:data.Title,url:data.Poster,release_date:data.Released});
